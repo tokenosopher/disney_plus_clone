@@ -53,6 +53,7 @@ const Nav = styled.nav`
   align-items: center;
   //0 in the below means top and bottom, 36px means left and right
   padding: 0 36px;
+  overflow-x: hidden;
 `
 
 const Logo = styled.img`
@@ -82,6 +83,7 @@ const NavMenu = styled.div`
       letter-spacing: 1.42px;
       position: relative;
       
+      //would be worth checking how transitions and transform work:
       &:after {
         content: "";
         height: 2px;
