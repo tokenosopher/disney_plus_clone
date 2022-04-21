@@ -6,18 +6,33 @@ import Movies from "./Movies";
 import {collection, getDocs, getDoc} from "firebase/firestore";
 import db from '../firebase'
 import {onSnapshot} from "firebase/firestore"
+//redux related imports:
+import {useDispatch }  from "react-redux";
+import { setMovies } from "../features/movies/movieSlice";
 
+import { nanoid } from "@reduxjs/toolkit";
 
 
 const Home = () => {
-    const [movies, setMovies] = useState([]);
+    // const [movies, setMovies] = useState([]);
+
+    const dispatch = useDispatch();
 
 
-    useEffect(() => {
-            onSnapshot(collection(db, "movies"), (snapshot) => {
-                console.log(snapshot.docs.map(doc => doc.data()));
-            })
-    }, [])
+    useEffect(
+        () =>
+            onSnapshot(collection(db, "movies"), (snapshot) =>
+                // setMovies(snapshot.docs.map((doc) => doc.data()))
+                dispatch(
+                    setMovies(
+                    snapshot.docs.map((doc) =>
+                    {return {id: doc.id, ...doc.data()}}
+                        )
+                    )
+                )
+            ),
+        []
+    );
 
 
     return (

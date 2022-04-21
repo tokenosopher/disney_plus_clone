@@ -1,7 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
+import { selectMovies } from "../features/movies/movieSlice";
+import { useSelector } from "react-redux";
 
 const Movies = () => {
+
+    const movies = useSelector(selectMovies);
+
+    console.log("this is movies", movies)
 
     return (
         <Container>
