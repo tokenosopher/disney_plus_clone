@@ -13,34 +13,13 @@ const Movies = () => {
         <Container>
             <h4>Recommended for You</h4>
             <Content>
-                <Wrap>
-                    <img src={"https://ntvb.tmsimg.com/assets/p18722572_b_h8_ak.jpg?w=1280&h=720"} />
-                </Wrap>
-                <Wrap>
-                    <img src={"https://ntvb.tmsimg.com/assets/p18722572_b_h8_ak.jpg?w=1280&h=720"} />
-                </Wrap>
-                <Wrap>
-                    <img src={"https://ntvb.tmsimg.com/assets/p18722572_b_h8_ak.jpg?w=1280&h=720"} />
-                </Wrap>
-                <Wrap>
-                    <img src={"https://ntvb.tmsimg.com/assets/p18722572_b_h8_ak.jpg?w=1280&h=720"} />
-                </Wrap>
-                <Wrap>
-                    <img src={"https://ntvb.tmsimg.com/assets/p18722572_b_h8_ak.jpg?w=1280&h=720"} />
-                </Wrap>
-                <Wrap>
-                    <img src={"https://ntvb.tmsimg.com/assets/p18722572_b_h8_ak.jpg?w=1280&h=720"} />
-                </Wrap>
-                <Wrap>
-                    <img src={"https://ntvb.tmsimg.com/assets/p18722572_b_h8_ak.jpg?w=1280&h=720"} />
-                </Wrap>
-                <Wrap>
-                    <img src={"https://ntvb.tmsimg.com/assets/p18722572_b_h8_ak.jpg?w=1280&h=720"} />
-                </Wrap>
-                <Wrap>
-                    <img src={"https://ntvb.tmsimg.com/assets/p18722572_b_h8_ak.jpg?w=1280&h=720"} />
-                </Wrap>
-
+                {movies &&
+                    movies.map((movie) => (
+                        <Wrap key={movie.id}>
+                            <img src={movie.cardImg} />
+                        </Wrap>
+                    ))
+                }
             </Content>
         </Container>
     )
