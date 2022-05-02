@@ -31,6 +31,12 @@ const Container = styled.div`
   padding:30px 0px 26px;
   grid-gap:25px;
   grid-template-columns: repeat(5, minmax(0, 1fr));
+  
+  //add media query to have one item per row if the screen is smaller than 768px
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+  
 `
 
 const Wrap = styled.div`
@@ -39,6 +45,9 @@ const Wrap = styled.div`
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
     rgb(0 0 0 / 73%) 0px 16px 10px -10px;
     transition: all 250ms cubic-bezier(0.25, 0.46, 0.45, 0.94) 0s;
+  
+  //add a media query to have one item in a row if the screen is 768px or less
+
   
     img {
       width: 100%;

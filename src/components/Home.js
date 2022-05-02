@@ -47,9 +47,12 @@ export default Home;
 
 //why main? Because browsers like to see main for the main component, according to Naz.
 const Container = styled.main`
+
+  overflow-x: hidden;
+  top: 72px;
   //this allows you to calculate the rest of the height - the header
   min-height: calc(100vh - 70px);
-  padding: 0 calc(3.5vw + 5px);
+  padding: calc(3.5vw + 5px);
   position: relative;
   overflow-x: hidden;
   

@@ -1,16 +1,41 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import styled from 'styled-components';
+import db from '../firebase'
+import { useParams } from "react-router-dom"
+import {doc, getDoc } from "firebase/firestore";
+
 
 const Detail = () => {
+
+    const [currentMovie, setCurrentMovie] = useState("")
+
+
+    //get the id from useParams
+    const {id} = useParams();
+    // console.log(id)
+
+
+
+    useEffect(() => {
+
+        async function getCurrentMovie() {
+            let theMovie = await getDoc(doc(db, 'movies', id))
+            setCurrentMovie(theMovie.data())
+            console.log(currentMovie)
+        } 
+        getCurrentMovie()
+        }
+    , [])
+
 
     return (
         <Container>
             <Background>
-              <img src={"https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2C42A74B2CCC3E1FEC11B09A3EFF12DEB1A29663740CDAEBB5EFC713B9F97235/scale?width=1920&aspectRatio=1.78&format=jpeg"} />
+              <img src={currentMovie.backgroundImg} />
             </Background>
 
             <ImageTitle>
-                <img src={"https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/2C5917FC19BF1C3380BE616572C129C282973BF087165533ED782E301ED7C4B8/scale?width=1440&aspectRatio=1.78"}/>
+                <img src={currentMovie.titleImg}/>
             </ImageTitle>
 
             <Controls>
@@ -36,11 +61,11 @@ const Detail = () => {
             </Controls>
 
             <Subtitle>
-                2018 · 7m · Family, Fantasy, Kids, Animation
+                {currentMovie.subtitle}
             </Subtitle>
 
             <Description>
-                A Chinese mom who's sad when her grown up son leaves home gets another chance at motherhood when one of her dumplings springs to life. But she finds that nothing stays cute and small forever.
+                {currentMovie.description}
             </Description>
 
         </Container>
@@ -49,9 +74,11 @@ const Detail = () => {
 export default Detail;
 
 const Container = styled.div`
-  min-height: calc(100vh - 70px);
+  min-height: calc(100vh - 80px);
   padding: 0 calc(3.5vw + 5px);
   position: relative;
+  margin-top:80px;
+  overflow: hidden;
 `
 
 const Background = styled.div`
