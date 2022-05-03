@@ -7,7 +7,7 @@ const Login = () => {
         <Container>
             <CTA>
                 < CTALogoOne>
-                    <img src={"/images/cta-logo-one.svg"} />
+                    <img src={"./images/cta-logo-one.svg"} />
                 </CTALogoOne>
                 <LoginButton>
                     GET ALL HERE
@@ -18,7 +18,7 @@ const Login = () => {
                 </Description>
 
                 <CTALogoTwo>
-                    <img src={"/images/cta-logo-two.png"} />
+                    <img src={"./images/cta-logo-two.png"} />
                 </CTALogoTwo>
             </CTA>
         </Container>
@@ -43,7 +43,7 @@ const Container = styled.div`
     left: 0;
     bottom: 0;
     right: 0;
-    background: url("/images/login-background.jpg") no-repeat top;
+    background: url("./images/login-background.jpg") no-repeat top;
     z-index: -1;
 `
 

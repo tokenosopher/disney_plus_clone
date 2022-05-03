@@ -60,7 +60,7 @@ const Container = styled.main`
   //top bottom left right 0 - it stretches the image across the parent div (in this case container)
   // z-index: -1 -> it moves the image behind everything.
   &:before {
-    background: url("/images/home-background.png") center center / cover 
+    background: url("./images/home-background.png") center center / cover 
     no-repeat fixed;
     content: "";
     position:absolute;
