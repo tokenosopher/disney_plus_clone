@@ -21,7 +21,7 @@ const Home = () => {
 
     useEffect(
         () =>
-            onSnapshot(collection(db, "movies"), (snapshot) =>
+            onSnapshot(collection(db, "Movies2"), (snapshot) =>
                 // setMovies(snapshot.docs.map((doc) => doc.data()))
                 dispatch(
                     setMovies(

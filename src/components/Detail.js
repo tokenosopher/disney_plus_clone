@@ -19,7 +19,7 @@ const Detail = () => {
     useEffect(() => {
 
         async function getCurrentMovie() {
-            let theMovie = await getDoc(doc(db, 'movies', id))
+            let theMovie = await getDoc(doc(db, 'Movies2', id))
             setCurrentMovie(theMovie.data())
             console.log(currentMovie)
         } 
