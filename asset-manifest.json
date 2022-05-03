@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "https://tokenosopher.github.io/disney_plus_clone/static/css/main.e7977888.css",
-    "main.js": "https://tokenosopher.github.io/disney_plus_clone/static/js/main.057d22fd.js",
-    "static/media/slick.svg": "https://tokenosopher.github.io/disney_plus_clone/static/media/slick.2630a3e3eab21c607e21.svg",
-    "static/media/slick.eot": "https://tokenosopher.github.io/disney_plus_clone/static/media/slick.a4e97f5a2a64f0ab1323.eot",
-    "static/media/slick.ttf": "https://tokenosopher.github.io/disney_plus_clone/static/media/slick.c94f7671dcc99dce43e2.ttf",
-    "static/media/slick.woff": "https://tokenosopher.github.io/disney_plus_clone/static/media/slick.295183786cd8a1389865.woff",
-    "index.html": "https://tokenosopher.github.io/disney_plus_clone/index.html",
-    "main.e7977888.css.map": "https://tokenosopher.github.io/disney_plus_clone/static/css/main.e7977888.css.map",
-    "main.057d22fd.js.map": "https://tokenosopher.github.io/disney_plus_clone/static/js/main.057d22fd.js.map"
+    "main.css": "./static/css/main.f792e212.css",
+    "main.js": "./static/js/main.e3e09664.js",
+    "static/media/slick.svg": "./static/media/slick.2630a3e3eab21c607e21.svg",
+    "static/media/slick.eot": "./static/media/slick.a4e97f5a2a64f0ab1323.eot",
+    "static/media/slick.ttf": "./static/media/slick.c94f7671dcc99dce43e2.ttf",
+    "static/media/slick.woff": "./static/media/slick.295183786cd8a1389865.woff",
+    "index.html": "./index.html",
+    "main.f792e212.css.map": "./static/css/main.f792e212.css.map",
+    "main.e3e09664.js.map": "./static/js/main.e3e09664.js.map"
   },
   "entrypoints": [
-    "static/css/main.e7977888.css",
-    "static/js/main.057d22fd.js"
+    "static/css/main.f792e212.css",
+    "static/js/main.e3e09664.js"
   ]
 }
